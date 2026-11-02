@@ -1,5 +1,9 @@
 product_id,component_id,component_name,qty_per_unit,mass_kg,unit_cost_eur,supplier_id,added_at_workcenter
-UR-CITY,CMP-FRAME,Aluminium frame,1,1.8,95.0,SUP-NORTH,WC1
-UR-CITY,CMP-WHEELKIT,Wheel/drivetrain kit,1,6.5,120.0,,WC2
-UR-CITY,CMP-ASSYKIT,Assembly parts kit,1,5.2,80.0,,WC3
-UR-CITY,CMP-PACKAGING,Packaging materials,1,1.5,15.0,,WC5
+PH-FLAG,mem,memory module (12GB+256GB),1,0.005,70,S1,WC1
+PH-FLAG,soc,flagship application processor,1,0.003,110,S-SOC,WC1
+PH-FLAG,pcb,printed circuit board,1,0.020,15,S-PCB,WC1
+PH-FLAG,disp,6.7-inch LTPO OLED display,1,0.060,90,S-DISP,WC3
+PH-FLAG,batt,5000 mAh battery,1,0.050,18,S-BATT,WC3
+PH-FLAG,cam,triple camera module (OIS),1,0.015,55,S-CAM,WC3
+PH-FLAG,chss,titanium chassis,1,0.050,20,S-CHSS,WC3
+PH-FLAG,oth,cables/screws/haptics/packaging,1,0.020,12,S-OTH,WC5
