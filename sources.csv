@@ -94,22 +94,28 @@ locations.csv,LOC-S3,lat,52.23,public,Warsaw coordinates,valid lat
 locations.csv,LOC-S3,lon,21.01,public,Warsaw coordinates,valid lon
 locations.csv,LOC-PORT,lat,51.92,public,Rotterdam port coordinates,valid lat
 locations.csv,LOC-PORT,lon,4.48,public,Rotterdam port coordinates,valid lon
-network_lanes.csv,L1,distance_km,9500,public,KR->EU sea route,>0
-network_lanes.csv,L1,transit_days_mean,18,guesstimate,Sea transit KR->EU,<= S1 lead
-network_lanes.csv,L1,transit_days_sd,3,guesstimate,Transit variability,>0
-network_lanes.csv,L2,distance_km,9000,public,TW->EU sea route,>0
-network_lanes.csv,L2,transit_days_mean,17,guesstimate,Sea transit TW->EU,<= S2 lead
-network_lanes.csv,L2,transit_days_sd,3,guesstimate,Transit variability,>0
-network_lanes.csv,L3,distance_km,1100,public,PL->DE truck distance,>0
-network_lanes.csv,L3,transit_days_mean,3,guesstimate,Truck transit PL->DE,<= S3 lead
-network_lanes.csv,L3,transit_days_sd,1,guesstimate,Transit variability,>0
-freight_rates.csv,L1,rate_eur_per_shipment,1500,guesstimate,Sea container fixed cost,plausible
-freight_rates.csv,L1,rate_eur_per_tkm,0.08,guesstimate,Sea rate per tonne-km,low (sea)
-freight_rates.csv,L1,min_charge_eur,2000,guesstimate,Sea minimum charge,>= fixed
-freight_rates.csv,L2,rate_eur_per_shipment,1500,guesstimate,Sea container fixed cost,plausible
-freight_rates.csv,L2,rate_eur_per_tkm,0.08,guesstimate,Sea rate per tonne-km,low
-freight_rates.csv,L2,min_charge_eur,2000,guesstimate,Sea minimum charge,>= fixed
-freight_rates.csv,L3,rate_eur_per_shipment,300,guesstimate,Truck fixed cost,plausible
-freight_rates.csv,L3,rate_eur_per_tkm,0.35,guesstimate,Truck rate per tonne-km,> sea
-freight_rates.csv,L3,min_charge_eur,400,guesstimate,Truck minimum charge,>= fixed
+network_lanes.csv,L1-SEA,distance_km,19000,estimated,"Approximate sea transport distance from South Korea supplier region to Rotterdam; representative route assumption, exact seaport not specified.","Positive planning estimate; not an exact port-to-port measurement."
+network_lanes.csv,L1-SEA,transit_days_mean,30,estimated,"Estimated average sea transport and handling time from South Korea to Rotterdam.","Planning assumption; not a confirmed carrier schedule."
+network_lanes.csv,L1-SEA,transit_days_sd,4,estimated,"Estimated variability of sea transport time from South Korea to Rotterdam.","Positive standard deviation below the mean."
+network_lanes.csv,L2-SEA,distance_km,19003,estimated,"Taipei-Rotterdam route reference: approximately 10,261 nautical miles, converted to approximately 19,003 km. https://searoutesnav.com/route/taipei-twtpe-17314/to/rotterdam-nlrtm-14821","Approximate route reference; actual supplier and departure port may differ."
+network_lanes.csv,L2-SEA,transit_days_mean,43,estimated,"Approximate route reference for Taipei-Rotterdam sea transport: around 42 days and 18 hours at 10 knots, rounded to 43 days. https://searoutesnav.com/route/taipei-twtpe-17314/to/rotterdam-nlrtm-14821","Rounded planning value; not a guaranteed delivery time."
+network_lanes.csv,L2-SEA,transit_days_sd,5,estimated,"Estimated variability of sea transport time from Taiwan to Rotterdam.","Positive standard deviation below the mean."
+network_lanes.csv,L3-TRUCK,distance_km,500,estimated,"Approximate road transport distance from Rotterdam to the representative production plant in Germany; exact plant address is not specified.","Planning estimate; exact road route may differ."
+network_lanes.csv,L3-TRUCK,transit_days_mean,2,estimated,"Estimated average truck transport time from Rotterdam to the German production plant.","Planning assumption including handling time."
+network_lanes.csv,L3-TRUCK,transit_days_sd,1,estimated,"Estimated variability of truck transport time from Rotterdam to Germany.","Positive standard deviation below the mean."
+network_lanes.csv,L4-TRUCK,distance_km,1100,estimated,"Approximate road transport distance from the Warsaw supplier region to the representative German production plant.","Planning estimate; exact addresses are not specified."
+network_lanes.csv,L4-TRUCK,transit_days_mean,3,estimated,"Estimated average truck transport time from Poland to the German production plant.","Planning assumption; not a carrier commitment."
+network_lanes.csv,L4-TRUCK,transit_days_sd,1,estimated,"Estimated variability of truck transport time from Poland to Germany.","Positive standard deviation below the mean."
+freight_rates.csv,L1-SEA,rate_eur_per_shipment,1500,estimated,"Assumed fixed sea freight cost per shipment, based on the project's previous freight cost assumption.","Positive estimated shipment cost."
+freight_rates.csv,L1-SEA,rate_eur_per_tkm,0.08,estimated,"Assumed sea freight rate per tonne-kilometre.","Lower than the assumed truck rate."
+freight_rates.csv,L1-SEA,min_charge_eur,2000,estimated,"Assumed minimum charge for sea freight shipments.","Minimum charge is greater than the fixed shipment cost."
+freight_rates.csv,L2-SEA,rate_eur_per_shipment,1500,estimated,"Assumed fixed sea freight cost per shipment, based on the project's previous freight cost assumption.","Positive estimated shipment cost."
+freight_rates.csv,L2-SEA,rate_eur_per_tkm,0.08,estimated,"Assumed sea freight rate per tonne-kilometre.","Lower than the assumed truck rate."
+freight_rates.csv,L2-SEA,min_charge_eur,2000,estimated,"Assumed minimum charge for sea freight shipments.","Minimum charge is greater than the fixed shipment cost."
+freight_rates.csv,L3-TRUCK,rate_eur_per_shipment,300,estimated,"Assumed fixed truck freight cost per shipment, based on the project's previous freight cost assumption.","Positive estimated shipment cost."
+freight_rates.csv,L3-TRUCK,rate_eur_per_tkm,0.35,estimated,"Assumed truck freight rate per tonne-kilometre.","Higher than the assumed sea freight rate."
+freight_rates.csv,L3-TRUCK,min_charge_eur,400,estimated,"Assumed minimum charge for truck freight shipments.","Minimum charge is greater than the fixed shipment cost."
+freight_rates.csv,L4-TRUCK,rate_eur_per_shipment,300,estimated,"Assumed fixed truck freight cost per shipment, based on the project's previous freight cost assumption.","Positive estimated shipment cost."
+freight_rates.csv,L4-TRUCK,rate_eur_per_tkm,0.35,estimated,"Assumed truck freight rate per tonne-kilometre.","Higher than the assumed sea freight rate."
+freight_rates.csv,L4-TRUCK,min_charge_eur,400,estimated,"Assumed minimum charge for truck freight shipments.","Minimum charge is greater than the fixed shipment cost."
 emission_factors.csv,primary_titanium_global_2023,value,15.0,guesstimate,Typical primary titanium LCA,not in CO2 scoreboard (format row)
