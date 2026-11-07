@@ -65,21 +65,21 @@ process_environment.csv,WC5,waste_kg_per_unit,0.03,guesstimate,Box/packaging was
 process_environment.csv,WC5,water_l_per_unit,0.0,guesstimate,No water,0
 suppliers.csv,S1,unit_price_eur,70,public,12GB+256GB memory set price (industry report),matches bom mem
 suppliers.csv,S1,promised_lead_days,15,guesstimate,Contract lead,<= mean lead
-suppliers.csv,S1,lead_time_mean_days,20,guesstimate,Production+sea transit,>= transit L1 (18)
+suppliers.csv,S1,lead_time_mean_days,20,guesstimate,Estimated total lead time including production, handling and 30 days sea transport.,>= transit L1 (18)
 suppliers.csv,S1,lead_time_sd_days,4,guesstimate,Lead variability,>0
 suppliers.csv,S1,capacity_per_month,60000,guesstimate,Supplier monthly capacity,> monthly demand
 suppliers.csv,S1,min_per_month,20000,guesstimate,Minimum order,<= capacity
 suppliers.csv,S1,kg_co2e_per_unit,0.8,guesstimate,Memory production+transport,plausible
-suppliers.csv,S2,unit_price_eur,72,public,Second-maker premium,> S1
+suppliers.csv,S2,unit_price_eur,72,guesstimate,Second-maker premium,> S1
 suppliers.csv,S2,promised_lead_days,12,guesstimate,Contract lead,<= mean lead
-suppliers.csv,S2,lead_time_mean_days,15,guesstimate,Production+sea transit,>= transit L2
+suppliers.csv,S2,lead_time_mean_days,15,guesstimate,Estimated total lead time including production, handling and 43 days sea transport.,>= transit L2
 suppliers.csv,S2,lead_time_sd_days,3,guesstimate,Lead variability,>0
 suppliers.csv,S2,capacity_per_month,50000,guesstimate,Supplier capacity,> demand
 suppliers.csv,S2,min_per_month,10000,guesstimate,Minimum order,<= capacity
 suppliers.csv,S2,kg_co2e_per_unit,0.7,guesstimate,Similar footprint,~ S1
-suppliers.csv,S3,unit_price_eur,75,public,Nearer (EU) maker premium,> S2
+suppliers.csv,S3,unit_price_eur,75,guesstimate,Nearer (EU) maker premium,> S2
 suppliers.csv,S3,promised_lead_days,5,guesstimate,Short contract lead,<= mean lead
-suppliers.csv,S3,lead_time_mean_days,7,guesstimate,Production+truck transit,>= transit L3
+suppliers.csv,S3,lead_time_mean_days,7,guesstimate,Estimated total lead time including production, handling and 3 days truck transport.,>= transit L3
 suppliers.csv,S3,lead_time_sd_days,1,guesstimate,Low lead variability,>0
 suppliers.csv,S3,capacity_per_month,30000,guesstimate,Smaller EU capacity,> demand
 suppliers.csv,S3,min_per_month,5000,guesstimate,Minimum order,<= capacity
