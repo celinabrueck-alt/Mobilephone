@@ -111,4 +111,3 @@ freight_rates.csv,L3,rate_eur_per_shipment,300,guesstimate,Truck fixed cost,plau
 freight_rates.csv,L3,rate_eur_per_tkm,0.35,guesstimate,Truck rate per tonne-km,> sea
 freight_rates.csv,L3,min_charge_eur,400,guesstimate,Truck minimum charge,>= fixed
 emission_factors.csv,primary_titanium_global_2023,value,15.0,guesstimate,Typical primary titanium LCA,not in CO2 scoreboard (format row)
- 
