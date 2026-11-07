@@ -65,7 +65,7 @@ process_environment.csv,WC5,waste_kg_per_unit,0.03,guesstimate,Box/packaging was
 process_environment.csv,WC5,water_l_per_unit,0.0,guesstimate,No water,0
 suppliers.csv,S1,unit_price_eur,70,public,12GB+256GB memory set price (industry report),matches bom mem
 suppliers.csv,S1,promised_lead_days,15,guesstimate,Contract lead,<= mean lead
-suppliers.csv,S1,lead_time_mean_days,20,guesstimate,Estimated total lead time including production, handling and 30 days sea transport.,>= transit L1 (18)
+suppliers.csv,S1,lead_time_mean_days,20,guesstimate,Estimated total lead time including production,handling and 30 days sea transport.,>= transit L1 (18)
 suppliers.csv,S1,lead_time_sd_days,4,guesstimate,Lead variability,>0
 suppliers.csv,S1,capacity_per_month,60000,guesstimate,Supplier monthly capacity,> monthly demand
 suppliers.csv,S1,min_per_month,20000,guesstimate,Minimum order,<= capacity
